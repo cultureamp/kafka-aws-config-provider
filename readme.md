@@ -2,7 +2,7 @@
 
 Kafak ConfigProvider implementation using AWS System Manger Parameter Store.
 
-## Kafka Connect Getting started
+## Kafka Connect getting started
 
 This package can be used as an [external secrets](https://docs.confluent.io/current/connect/security.html#externalizing-secrets) provider for Kafka Connect.
 
