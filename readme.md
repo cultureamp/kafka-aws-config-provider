@@ -27,3 +27,13 @@ my.secret=${ssm:/super/secret/password}
 ```
 
 To install the custom ConfigProvider implementation, add a new subdirectory containing the JAR file to the directory that is on Connect’s plugin.path, and (re)start the Connect workers. When the Connect worker starts up it instantiates all ConfigProvider implementations specified in the worker configuration. All properties prefixed with config.providers.[provider].param. are passed to the configure() method of the ConfigProvider. When the Connect worker shuts down, it calls the close() method of the ConfigProvider.
+
+## How to build
+
+This project is built using [SBT](https://www.scala-sbt.org/). Follow the instructions to [install SBT](https://www.scala-sbt.org/download.html) then run:
+
+```
+sbt assembly
+```
+
+This will create a jar under `/target/scala_{SCALA_VERSION}/jars/com.cultureamp_kafka-aws-config-provider_{SCALA_VERSION}_{PROJECT_VERSION}.jar`
