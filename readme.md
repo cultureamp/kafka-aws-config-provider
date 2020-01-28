@@ -25,3 +25,5 @@ Then you can reference the configuration variables in the connector configuratio
 # depending on the ConfigProvider implementation.
 my.secret=${ssm:/super/secret/password}
 ```
+
+To install the custom ConfigProvider implementation, add a new subdirectory containing the JAR file to the directory that is on Connect’s plugin.path, and (re)start the Connect workers. When the Connect worker starts up it instantiates all ConfigProvider implementations specified in the worker configuration. All properties prefixed with config.providers.[provider].param. are passed to the configure() method of the ConfigProvider. When the Connect worker shuts down, it calls the close() method of the ConfigProvider.
