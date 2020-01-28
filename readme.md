@@ -36,4 +36,4 @@ This project is built using [SBT](https://www.scala-sbt.org/). Follow the instru
 sbt assembly
 ```
 
-This will create a jar under `/target/scala_{SCALA_VERSION}/jars/com.cultureamp_kafka-aws-config-provider_{SCALA_VERSION}_{PROJECT_VERSION}.jar`
+This will create a jar under `./target/scala_{SCALA_VERSION}/jars/com.cultureamp_kafka-aws-config-provider_{SCALA_VERSION}_{PROJECT_VERSION}.jar`
