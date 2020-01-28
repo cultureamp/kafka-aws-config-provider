@@ -84,14 +84,12 @@ class SsmConfigProvider(
     )
   }
 
-
   /** We could also implement subscribe to listen for changes to credentials. I
     * will skip this for now, but it might become important down the track.
     *
     * override def subscribe(...)
     * override def unsubscribe(...)
     */
-
 
   /** We don't need to close anything */
   override def close(): Unit = ()
