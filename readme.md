@@ -11,7 +11,7 @@ Here is an example of how to use `SsmConfigProvider` in the worker configuration
 ```
 # Additional properties for the worker configuration
 config.providers=ssm   # multiple comma-separated provider types can be specified here
-config.providers.ssm.class=com.cultureamp.kafka.config.provider.SsmConfingProviderx
+config.providers.ssm.class=com.cultureamp.kafka.config.provider.SsmConfingProvider
 ```
 
 Then you can reference the configuration variables in the connector configuration as follows:
