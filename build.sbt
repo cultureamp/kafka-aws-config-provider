@@ -15,9 +15,15 @@ lazy val currentProject = (project in file("."))
     assemblyJarName in assembly :=
       s"jars/${organization.value}_${name.value}_${scalaVersion.value}_${version.value}.jar",
 
-    // https://stackoverflow.com/questions/25144484/sbt-assembly-deduplication-found-error
     assemblyMergeStrategy in assembly := {
-      case PathList("META-INF", xs @ _*) => MergeStrategy.discard
-      case x => MergeStrategy.first
+      case "META-INF/MANIFEST.MF" => MergeStrategy.discard
+      case "META-INF/io.netty.versions.properties" => MergeStrategy.discard
+      case "module-info.class" => MergeStrategy.discard
+      case x =>
+        val oldStrategy = (assemblyMergeStrategy in assembly).value
+        oldStrategy(x)
     },
+
+    // Skip tests
+    test in assembly := {}
   )
