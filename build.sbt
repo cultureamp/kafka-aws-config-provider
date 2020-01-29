@@ -22,8 +22,5 @@ lazy val currentProject = (project in file("."))
       case x =>
         val oldStrategy = (assemblyMergeStrategy in assembly).value
         oldStrategy(x)
-    },
-
-    // Skip tests
-    test in assembly := {}
+    }
   )
