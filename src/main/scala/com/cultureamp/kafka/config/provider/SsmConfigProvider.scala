@@ -22,10 +22,14 @@ import software.amazon.awssdk.services.ssm.model.{
   * @param ssmClient the AWS Systems Manager client to be used
   * @param ttl the TTL in seconds for retrieved configurations
   */
-class SsmConfigProvider extends ConfigProvider {
+class SsmConfigProvider(val ssmClient: SsmClient) extends ConfigProvider {
 
-  val ssmClient: SsmClient = SsmClient.builder.build
+  /** TODO: This should be configurable */
   val configDataTtl: Long = 3600
+
+  def this() {
+    this(SsmClient.builder.build)
+  }
 
   /** We don't need to configure anything */
   override def configure(configs: JMap[String, _]): Unit = ()

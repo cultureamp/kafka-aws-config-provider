@@ -3,7 +3,7 @@ lazy val currentProject = (project in file("."))
     scalaVersion := "2.12.7",
     organization := "com.cultureamp",
     name := "kafka-aws-config-provider",
-    version := "SNAPSHOT",
+    version := "0.1.0",
 
     libraryDependencies ++= Seq(
       "org.apache.kafka" %% "kafka" % "2.3.1" % Provided,
