@@ -32,7 +32,7 @@ CONNECT_CONFIG_PROVIDERS_ENV_CLASS=com.cultureamp.kafka.config.provider.SsmConfi
 
 ### Step 3: Reference external variables
 
-Then you can reference the configuration variables in the connector configuration as follows:
+You can now reference configuration variables in the connector configuration as follows:
 
 ```
 # Variable references are of the form ${provider:[path:]key} where the path is optional
