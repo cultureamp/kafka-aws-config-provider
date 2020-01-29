@@ -6,7 +6,7 @@ Kafak ConfigProvider implementation using AWS System Manger Parameter Store.
 
 This package can be used as an [external secrets](https://docs.confluent.io/current/connect/security.html#externalizing-secrets) provider for Kafka Connect.
 
-## Step 1: Add configuration provider
+### Step 1: Add configuration provider
 
 Here is an example of how to use `SsmConfigProvider` in the worker configuration:
 
@@ -24,7 +24,7 @@ CONNECT_CONFIG_PROVIDERS_ENV_CLASS=com.cultureamp.kafka.config.provider.SsmConfi
 
 To install the custom ConfigProvider implementation, add a new subdirectory containing the JAR file to the directory that is on Connect’s plugin.path, and (re)start the Connect workers. When the Connect worker starts up it instantiates all ConfigProvider implementations specified in the worker configuration. All properties prefixed with config.providers.[provider].param. are passed to the configure() method of the ConfigProvider. When the Connect worker shuts down, it calls the close() method of the ConfigProvider.
 
-## Step 2: Reference external variables
+### Step 2: Reference external variables
 
 Then you can reference the configuration variables in the connector configuration as follows:
 
