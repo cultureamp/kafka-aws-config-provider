@@ -12,7 +12,7 @@ To install the custom `ConfigProvider` implementation, add a new subdirectory co
 
 When the Connect worker starts up it instantiates all `ConfigProvider` implementations specified in the worker configuration. 
 
-All properties prefixed with config.providers.[provider].param. are passed to the `configure()` method of the `ConfigProvider`. When the Connect worker shuts down, it calls the `close()` method of the `ConfigProvider`.
+All properties prefixed with `config.providers.[provider].param`. are passed to the `configure()` method of the `ConfigProvider`. When the Connect worker shuts down, it calls the `close()` method of the `ConfigProvider`.
 
 ### Step 2: Add configuration provider
 
