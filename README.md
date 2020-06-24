@@ -20,14 +20,14 @@ Here is an example of how to use `SsmConfigProvider` in the worker configuration
 
 ```
 config.providers=ssm
-config.providers.ssm.class=com.cultureamp.kafka.config.provider.SsmConfingProvider
+config.providers.ssm.class=com.cultureamp.kafka.config.provider.SsmConfigProvider
 ```
 
 If you are using the `confluentinc/cp-kafka-connect` Docker image, add the following environment variables instead.
 
 ```
 CONNECT_CONFIG_PROVIDERS=ssm
-CONNECT_CONFIG_PROVIDERS_ENV_CLASS=com.cultureamp.kafka.config.provider.SsmConfingProvider
+CONNECT_CONFIG_PROVIDERS_SSM_CLASS=com.cultureamp.kafka.config.provider.SsmConfigProvider
 ```
 
 ### Step 3: Reference external variables
