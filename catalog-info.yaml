@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: kafka-aws-config-provider-location
+  description: kafka-aws-config-provider catalog files
+spec:
+  targets:
+    - ./component-info.yaml

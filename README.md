@@ -1,6 +1,6 @@
 # Kafka AWS Config Provider
 
-Kafak ConfigProvider implementation using AWS System Manger Parameter Store.
+Kafka ConfigProvider implementation using AWS System Manger Parameter Store.
 
 ## Kafka Connect getting started
 
