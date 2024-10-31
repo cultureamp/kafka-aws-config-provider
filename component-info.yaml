@@ -1,14 +1,14 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: "kafka-aws-config-provider"
-  description: "Kafka ConfigProvider implementation using AWS System Manger Parameter Store."
-  links: # add any links that would be useful here. Dashboards, site urls etc
+  name: kafka-aws-config-provider
+  description: Kafka ConfigProvider implementation using AWS System Manger Parameter Store.
+  links:
     - title: Source
       url: https://github.com/cultureamp/kafka-aws-config-provider
   tags:
+    - camp-data-intelligence
     - tier-2
-    - camp-platform
   annotations:
     github.com/project-slug: cultureamp/kafka-aws-config-provider
     github.com/team-slug: cultureamp/data-services
